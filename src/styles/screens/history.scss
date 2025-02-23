@@ -1,0 +1,168 @@
+.history-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: calc(var(--vh, 1vh) * 100 - var(--bottom-offset));
+  height: calc(100dvh - var(--bottom-offset));
+
+  .history-content {
+    overflow: auto;
+  }
+
+  h2, .history-header {
+    padding: 0 20px;
+  }
+
+  .ant-tabs {
+    padding: 0 20px;
+
+    .ant-tabs-tab {
+      padding: 10px 0;
+    }
+  }
+
+  .history-header {
+    padding-bottom: 40px;
+
+    button {
+      max-width: 100%;
+  
+      span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  
+    svg {
+      margin-top: 2px;
+    }
+  }
+
+  .history-table {
+    width: 100%;
+  
+    .history-table-empty {
+      padding: 10px;
+      color: $neutral-300;
+      text-align: center;
+    }
+  
+    .history-table-headers, .history-table-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+  
+      > div {
+        text-align: center;
+      }
+  
+      > div:nth-child(1) {
+        width: 33%;
+      }
+  
+      > div:nth-child(2), > div:nth-child(3) {
+        width: 33%;
+      }
+    }
+  
+    .history-table-headers {
+      color: $neutral-300;
+      margin-bottom: 10px;
+    }
+  
+    .history-table-body {
+      .history-table-row {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .history-workouts {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .history-workout-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $neutral-300;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+
+    .history-workout-name {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .history-workout-day {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        color: $brand-400;
+      }
+    } 
+  }
+
+  .history-workout-exercises {
+    margin-top: -5px;
+    margin-bottom: 15px;
+
+    > div {
+      margin-bottom: 20px;
+    }
+
+    .history-workout-exercise-name {
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .exercise-table {
+      width: 100%;
+
+      .exercise-table-headers, .exercise-table-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+
+        > div {
+          text-align: center;
+          width: 25%;
+        }
+      }
+
+      .exercise-table-headers {
+        color: $neutral-300;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      .exercise-table-body {
+        .exercise-table-row {
+          padding: 5px 0;
+          font-size: 14px;
+
+          > div:nth-child(even) {
+            color: $brand-400;
+          }
+        }
+      }
+    }
+  }
+}

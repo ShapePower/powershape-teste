@@ -1,0 +1,21 @@
+@import "./variables.scss";
+@import "./base.scss";
+
+// screens
+@import "./screens/login.scss";
+@import "./screens/splash.scss";
+@import "./screens/home.scss";
+@import "./screens/profile.scss";
+@import "./screens/run.scss";
+@import "./screens/payment.scss";
+@import "./screens/history.scss";
+
+// mixins
+@import "./mixins/animation.scss";
+
+// components
+@import "./components.scss";
+@import "./components/exercise.scss";
+@import "./components/exercise-footer.scss";
+@import "./components/exercise-pane.scss";
+@import "react-day-picker/style.css";

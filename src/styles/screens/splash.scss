@@ -1,0 +1,22 @@
+@import "../mixins/animation.scss";
+
+.splash {
+  & {
+    background: linear-gradient(16.94deg, #101012 47.38%, #357E17 134.54%);
+  }
+
+  &[data-step="1"] {
+    img {
+      padding-top: 40px;
+    }
+
+    .splash-bottom {
+      margin: 0 20px 40px 20px;
+    }
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+}

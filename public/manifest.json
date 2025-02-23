@@ -1,0 +1,45 @@
+{
+  "short_name": "Power Shape",
+  "name": "Power Shape: Acompanhe sua jornada de fitness",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "pwa-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "pwa-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "maskable-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#101012",
+  "background_color": "#101012",
+  "prefer_related_applications": false,
+  "categories": [
+    "fitness",
+    "health",
+    "lifestyle"
+  ],
+  "description": "Acompanhe e melhore sua jornada de fitness com Power Shape",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "scope": "/",
+  "id": "powershape"
+}

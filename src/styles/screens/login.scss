@@ -1,0 +1,55 @@
+.login {
+  & {
+    justify-content: space-between;
+  }
+
+  .login-header {
+    & {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: relative;
+      padding: 16px;
+    }
+
+    .icon {
+      position: absolute;
+      top: 4px;
+      left: 24px;
+    }
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  .login-content {
+    & {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+      width: 100%;
+    }
+
+    > * {
+      margin: 0 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+  }
+
+  .login-footer {
+    & {
+      display: flex;
+      width: 100%;
+    }
+    
+    .full {
+      margin: 0 20px 40px 20px;
+    }
+  }
+}

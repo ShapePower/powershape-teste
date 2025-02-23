@@ -1,0 +1,7 @@
+{
+  "name": "powershape",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

@@ -1,0 +1,243 @@
+.run {
+  & {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+  }
+
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $brand-400;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.3s ease-out;
+  }
+
+  &.flash::after {
+    opacity: 0.3;
+    animation: flash-transition 0.5s ease-out forwards;
+  }
+
+  &-header {
+    & {
+      padding: 10px 20px 10px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $neutral-500;
+      border-bottom: 2px solid $neutral-300;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  &-info {
+    & {
+      display: flex;
+      padding: 20px;
+      border-bottom: 1px solid $neutral-500;
+    }
+
+    &.cardio > div {
+      width: 100% !important;
+    }
+
+    > div {
+      & {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 50%;
+      }
+
+      p {
+        margin: 0;
+        font-size: 13px;
+        color: $brand-400;
+      }
+    }
+
+    &.centered {
+      align-items: center;
+    }
+
+    .cardio-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: $neutral-100;
+    }
+  }
+
+  .next-step {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+    .text.error {
+      margin-top: 80px;
+    }
+
+    .add-photos {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .img-wrapper {
+        width: 75px;
+        aspect-ratio: 1/1;
+        background-color: $neutral-500;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          color: $neutral-300;
+        }
+      }
+      
+      input {
+        padding: 0;
+        font-size: 12px;
+        font-weight: 400;
+        color: $neutral-300;
+        background-color: transparent;
+        border: none;
+        border-radius: 0px;
+      }
+    }
+  }
+
+  .cardio-panes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 90%;
+    width: 100%;
+    align-self: center;
+    margin: 20px 0;
+
+    .cardio-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .cardio-pane-title {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: $neutral-300;
+        font-weight: 500;
+      }
+    }
+
+    hr {
+      width: 80%;
+      border-color: $neutral-500;
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    .countdown-section {
+      .ant-card-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
+      }
+      button {
+        border: 2px solid transparent;
+        &.play {
+          border: 2px solid $brand-400;
+        }
+        margin-left: 10px;
+      }
+
+      .countdown-box {
+        border: 2px solid $brand-400;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        flex: 1;
+    
+        &.done {
+          background-color: $brand-400;
+          color: $neutral-700;
+        }
+    
+        .countdown-text {
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .cardio-sets .cardio-set {
+      .ant-card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+      }
+      h3 {
+        margin: 0;
+
+        &:has(svg) {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      .cardio-set-details svg {
+        color: $neutral-300;
+      }
+    }
+
+    .cardio-sets-arrows {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.reset-modal {
+  .ant-modal-content {
+    .ant-modal-header {
+      background-color: transparent;
+    }
+
+    .ant-btn + .ant-btn {
+      color: $neutral-500;
+      background-color: $brand-400;
+    }
+  }
+}
+
+@keyframes flash-transition {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}

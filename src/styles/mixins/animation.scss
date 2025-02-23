@@ -1,0 +1,20 @@
+@mixin appear($duration) {
+  animation: appear $duration var(--ease-in-out-quad) forwards;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0.5);
+    filter: blur(10px);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

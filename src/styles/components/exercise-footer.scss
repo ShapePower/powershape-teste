@@ -1,0 +1,56 @@
+.exercise-footer {
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 10px;
+  background-color: $neutral-700;
+
+  .exercise-footer-status {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .exercise-footer-bubbles {
+    display: flex;
+    gap: 10px;
+
+    .exercise-footer-bubble {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $neutral-400;
+      transition: all 0.15s ease;
+
+      &.current {
+        background-color: $neutral-200;
+      }
+
+      &.active {
+        background-color: $brand-400;
+      }
+    }
+  }
+
+  .exercise-footer-actions {
+    display: flex;
+    gap: 10px;
+
+    button:last-of-type {
+      color: $neutral-500;
+      background: $brand-400;
+
+      &:hover, &:active, &:focus {
+        color: $neutral-500;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        background: $neutral-300;
+      }
+    }
+  }
+}
